@@ -161,3 +161,8 @@ Author Information
 ------------------
 
 Created by Ricardo Sanchez (ricsanfre) taking as base the development [targetcli](https://github.com/OndrejHome/ansible.targetcli) from Ondrej Famera <ondrej-xa2iel8u@famera.cz> 
+
+
+## Author Information
+
+Email: tsengel.de@gmail.com
