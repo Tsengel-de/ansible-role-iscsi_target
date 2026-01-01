@@ -1,0 +1,6 @@
+---
+# vars file for iscsitarget
+
+iscsi_packages:
+  - python3-distutils
+  - targetcli-fb
