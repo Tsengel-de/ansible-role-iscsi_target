@@ -10,7 +10,7 @@ Additionaly this role includes own python mudules to interact with targetcli com
 Requirements
 ------------
 
-This role is not creating any disks/partitions/LVs. It is expected that they are already present on machine or created by some other role. For example: [ricsanfre.storage](https://galaxy.ansible.com/ricsanfre/storage)
+This role is not creating any disks/partitions/LVs. It is expected that they are already present on machine or created by some other role. For example: [tsengel.storage](https://galaxy.ansible.com/tsengel/storage)
 
 Role Variables
 --------------
@@ -20,7 +20,7 @@ To configure the iSCSI target, the following nested variable is used which defin
 
 ```yml
 iscsi_targets:
-  - name: "iqn.2021-07.com.ricsanfre:target_server"
+  - name: "iqn.2021-07.com.tsengel:target_server"
     disks:
       - name: lun_node1
         path: /dev/vg_iscsi/vg_iscsi_lv_node1
@@ -39,7 +39,7 @@ iscsi_targets:
         type: block
         lunid: 3
     initiators:
-      - name: iqn.2021-07.com.ricsanfre:node1
+      - name: iqn.2021-07.com.tsengel:node1
         authentication:
           userid: node1
           password: passwd1
@@ -50,7 +50,7 @@ iscsi_targets:
             lunid: 0
           - mapped_lunid: 1
             lunid: 2
-      - name: iqn.2021-07.com.ricsanfre:node2
+      - name: iqn.2021-07.com.tsengel:node2
         authentication:
           userid: node2
           password: passwd2
@@ -75,7 +75,7 @@ None.
 Example Playbook
 ----------------
 
-This example use `ricsanfre.storage` role for creating the logical volumes used to configure the iSCSI target
+This example use `tsengel.storage` role for creating the logical volumes used to configure the iSCSI target
 
 ```yml
 - hosts: all
@@ -106,7 +106,7 @@ This example use `ricsanfre.storage` role for creating the logical volumes used 
         vg: vg_iscsi
         size: 100
     iscsi_targets:
-      - name: "iqn.2021-07.com.ricsanfre:{{ ansible_facts['nodename'] }}"
+      - name: "iqn.2021-07.com.tsengel:{{ ansible_facts['nodename'] }}"
         disks:
           - name: lun_node1
             path: /dev/vg_iscsi/vg_iscsi_lv_node1
@@ -125,7 +125,7 @@ This example use `ricsanfre.storage` role for creating the logical volumes used 
             type: block
             lunid: 3
         initiators:
-          - name: iqn.2021-07.com.ricsanfre:node1
+          - name: iqn.2021-07.com.tsengel:node1
             authentication:
               userid: node1
               password: passwd1
@@ -134,7 +134,7 @@ This example use `ricsanfre.storage` role for creating the logical volumes used 
                 lunid: 0
               - mapped_lunid: 1
                 lunid: 2
-          - name: iqn.2021-07.com.ricsanfre:node2
+          - name: iqn.2021-07.com.tsengel:node2
             authentication:
               userid: node2
               password: passwd2
@@ -148,8 +148,8 @@ This example use `ricsanfre.storage` role for creating the logical volumes used 
           - ip: "{{ ansible_default_ipv4.address | default(ansible_all_ipv4_addresses[0]) }}"
 
   roles:
-    - ricsanfre.storage
-    - ricsanfre.iscsi_target
+    - tsengel.storage
+    - tsengel.iscsi_target
 ```
 
 License
@@ -160,7 +160,7 @@ MIT/BSD
 Author Information
 ------------------
 
-Created by Ricardo Sanchez (ricsanfre) taking as base the development [targetcli](https://github.com/OndrejHome/ansible.targetcli) from Ondrej Famera <ondrej-xa2iel8u@famera.cz> 
+Created by Tsengel (tsengel) taking as base the development [targetcli](https://github.com/OndrejHome/ansible.targetcli) from Ondrej Famera <ondrej-xa2iel8u@famera.cz> 
 
 
 ## Author Information

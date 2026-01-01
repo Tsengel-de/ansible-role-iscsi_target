@@ -44,7 +44,7 @@ options:
 notes:
    - tested on Ubuntu 20.04
 requirements: [ ]
-author: "Ricardo Sanchez <ricsanfre@gmail.com>"
+author: "Tsengel <tsengel.de@gmail.com>"
 '''
 
 EXAMPLES = '''

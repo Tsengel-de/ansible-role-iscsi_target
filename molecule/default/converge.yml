@@ -28,7 +28,7 @@
         vg: vg_iscsi
         size: 100
     iscsi_targets:
-      - name: "iqn.2021-07.com.ricsanfre:{{ ansible_facts['nodename'] }}"
+      - name: "iqn.2021-07.com.tsengel:{{ ansible_facts['nodename'] }}"
         disks:
           - name: lun_node1
             path: /dev/vg_iscsi/vg_iscsi_lv_node1
@@ -47,7 +47,7 @@
             type: block
             lunid: 3
         initiators:
-          - name: iqn.2021-07.com.ricsanfre:node1
+          - name: iqn.2021-07.com.tsengel:node1
             authentication:
               userid: node1
               password: passwd1
@@ -56,7 +56,7 @@
                 lunid: 0
               - mapped_lunid: 1
                 lunid: 2
-          - name: iqn.2021-07.com.ricsanfre:node2
+          - name: iqn.2021-07.com.tsengel:node2
             authentication:
               userid: node2
               password: passwd2

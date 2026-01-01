@@ -15,13 +15,13 @@ iscis_targets: []
 #         path: testing/vm1
 #       - name: vm2
 #         path: testing/vm2
-#   - name: iqn.2021-07.com.ricsanfre:target1
+#   - name: iqn.2021-07.com.tsengel:target1
 #     disks:
 #       - name: vm3
 #         path: testing/vm2
 #         type: iblock
 #     initiators:
-#       - name: iqn.2021-07.com.ricsanfre:target1
+#       - name: iqn.2021-07.com.tsengel:target1
 #         authentication:
 #           userid: myuser
 #           password: mypassword

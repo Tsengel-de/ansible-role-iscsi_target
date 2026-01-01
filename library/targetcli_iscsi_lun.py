@@ -37,7 +37,7 @@ options:
 notes:
    - Tested on Ubuntu 20.4
 requirements: [ ]
-authors: "Ondrej Famera <ondrej-xa2iel8u@famera.cz>" and "Ricardo Sanchez <ricsanfre@gmail.com>"
+authors: "Ondrej Famera <ondrej-xa2iel8u@famera.cz>" and "Tsengel <tsengel.de@gmail.com>"
 '''
 
 EXAMPLES = '''
