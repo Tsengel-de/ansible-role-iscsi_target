@@ -1,18 +1,17 @@
 galaxy_info:
-  role_name: iscsi_target
-  author: Tsengel-de
+  author: tsengel-de
+  namespace: tsengel-de
   description: Configure iSCSI Target role
   license: MIT
   min_ansible_version: '2.9'
   platforms:
-  - name: Ubuntu
-    versions:
-    - focal
-    - xenial
-    - bionic
+    - name: Ubuntu
+      versions:
+        - focal
+        - xenial
+        - bionic
   galaxy_tags:
-  - system
-  - disk
-  - iscsi
-  namespace: Tsengel-de
+    - system
+    - disk
+    - iscsi
 dependencies: []
